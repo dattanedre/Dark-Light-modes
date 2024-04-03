@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark-Light Theme</title>
+    <style>
+        .btn-container {
+            width: 50px;
+            display: flex;
+        }
+
+        .img-theme {
+            height: 40px;
+            padding: 5px;
+            border-radius: 5px;
+            margin: 0 3px;
+            background-color: #fff;
+        }
+
+        .active {
+            border: 1px solid black;
+        }
+
+        .theme-dark {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .theme-Light {
+            background-color: #ffffff;
+            color: #000;
+        }
+        .description{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="" id="body">
+
+    <div class="btn-container">
+
+        <img src="dark-mode.png" alt="Dark-theme" class="img-theme " onclick="darkMode()" id="dark" />
+        <img src="light-mode.png" alt="Light-theme" class="img-theme " onclick="lightMode()" id="light" />
+
+    </div>
+
+   <div class="description">
+    
+    <h1>Dark-Light Mode Switch</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi laboriosam molestias quo nostrum sapiente officia accusantium sit ducimus! Molestiae, nam quidem? <br/>Voluptate inventore iste nam obcaecati iusto adipisci minus voluptates tempora harum facilis veniam sunt, quae alias ullam blanditiis incidunt cumque? <br/>Nisi rem impedit sed, error sequi ab voluptatem debitis.</p>
+
+    
+   </div>
+
+
+    <script>
+
+        function darkMode() {
+            const dark = document.getElementById("dark");
+            dark.classList.add("active");
+
+            const light = document.getElementById("light");
+            light.classList.remove("active");
+
+            const themedark = document.getElementById("body");
+            themedark.className = "theme-dark";
+        }
+
+        function lightMode() {
+            const light = document.getElementById("light");
+            light.classList.add("active");
+
+            const dark = document.getElementById("dark");
+            dark.classList.remove("active");
+
+            const themelight = document.getElementById("body");
+            themelight.className= "theme-light";
+        }
+    </script>
+</body>
+
+</html>
